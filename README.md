@@ -1,87 +1,168 @@
-# Getting Started with Create React App
+# 🌱 Nourivo — Steps to Smiles
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Demo: [nourivo-praatishthaas-projects.vercel.app](https://nourivo-praatishthaas-projects.vercel.app)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌟 What is Nourivo?
 
-### `npm start`
+**Nourivo** is a social impact platform that transforms *your daily steps into meals for those in need.*  
+With every **10,000 steps**, you trigger the donation of a **meal** to someone who needs it — all without spending a rupee.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+It’s powered by you, monitored by volunteers, and executed through verified NGOs.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> ✨ _Your walk can feed a soul. Literally._ ✨
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 💡 Why is Nourivo Needed?
 
-### `npm run build`
+Millions of people walk every day. And millions more go hungry.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Urban youth** are more health-conscious than ever, tracking their steps, workouts, and fitness daily.
+- **NGOs** face difficulty in consistently securing donations and volunteers.
+- **Volunteers** often want to help but don’t know *how*, *when*, or *where*.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+💥 Nourivo bridges that gap:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- It lets people **gamify their steps** for a cause.
+- It enables NGOs to **receive instant triggers** for donations.
+- It rewards volunteers with **badges**, purpose, and pride.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠 How it Works
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Track Steps:**  
+   Volunteers walk with their phone or fitness tracker. Once they reach **10,000 steps**, Nourivo recognizes it.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Trigger Donation:**  
+   Behind the scenes, a request is sent to a partnered **NGO** to deliver one meal to a nearby location.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Badge System:**  
+   Volunteers unlock **milestone badges** at 10, 30, 50, 75, and 100 meals donated. Keep walking, keep unlocking.
 
-## Learn More
+4. **NGO Dashboard:**  
+   NGOs can log in to see:
+   - Number of meals received
+   - Nearby volunteers
+   - Last donation time
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. **Volunteer Dashboard:**  
+   Volunteers can see:
+   - Steps today
+   - Total steps walked
+   - Meals donated
+   - Badges earned
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 👤 Login Credentials
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 👟 Volunteer Login
+```
 
-### Analyzing the Bundle Size
+Email: [user@nourivo.com](mailto:user@nourivo.com)
+Password: password123
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
 
-### Making a Progressive Web App
+### 🏥 NGO Login
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+NGO ID: NGO123
+Password: securepass
 
-### Advanced Configuration
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> These are mock login credentials (no backend yet). But they simulate the full flow. Actual authentication will be added later.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🖥 Tech Stack
 
-### `npm run build` fails to minify
+| Frontend        | Notes                             |
+|----------------|-----------------------------------|
+| React.js        | Functional components + hooks     |
+| Tailwind CSS    | Fast, responsive UI               |
+| React Router    | SPA navigation                    |
+| Custom Contexts | `AuthContext`, `StepContext`      |
+| Vercel          | Deployment                        |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
 
-## Running the Application
+## 🧠 Features
 
-To run this application, you will need:
+### 👥 User Types
+- **Volunteer**
+- **NGO**
 
-1.  **Node.js and npm:** This project is a React application, so you need Node.js and npm (Node Package Manager) installed on your machine. You can download them from [https://nodejs.org/](https://nodejs.org/).
-2.  **Install dependencies:** After cloning the project, navigate to the project directory in your terminal and run `npm install` to install all the necessary dependencies.
-3.  **Environment variables:** The application may require some environment variables to be set. These variables are typically stored in a `.env` file in the root of the project. You may need to create this file and add the necessary variables.
-4.  **Run the application:** Once the dependencies are installed and the environment variables are set, you can run the application using the command `npm start`. This will start the development server and open the application in your browser.
+### 🔐 Auth (Mock)
+- Credential-based login system
+- Context-managed session data
 
-## API Keys
+### 💾 Dashboards
+- Volunteer Dashboard: Steps, meals, badges
+- NGO Dashboard: Meals received, volunteer data
 
-The following API keys are needed for full functionality:
+### 🥇 Badges System
+- Automatically awards badges for meals donated
 
-1.  **Fitbit API key and client ID:** To integrate with the Fitbit API and retrieve step data, you need to obtain an API key and client ID from the Fitbit Developer Portal ([https://dev.fitbit.com/](https://dev.fitbit.com/)). You will need to create a Fitbit application and configure it with the necessary permissions.
-2.  **NGO notification system API key (if applicable):** If you want to integrate with a real NGO notification system, you will need to obtain an API key from the provider of that system.
-3.  **Backend API endpoint:** The application currently uses mock implementations for NGO sign-up, sign-in, and fetching nearby volunteers. To connect to a real backend, you need to configure the API endpoint in the `ngoService.jsx` file.
+### 🎨 UI
+- Fully responsive
+- Clean, accessible design
+- Brand colors: Bistre, YellowBus, Tiffany Blue, Slate Gray, Teal
+
+---
+
+## 🌍 Scope for Mainstream Use
+
+> Nourivo isn’t just a project. It’s a **movement** waiting to go mainstream.
+
+### ✅ Feasibility
+- With Google Fit / Apple Health API, step tracking becomes seamless
+- Lightweight backend can handle NGO meal dispatch notifications
+- Community-based donation verification ensures authenticity
+
+### 🌐 Use Cases
+- **Colleges & Schools**: Can run step-donation challenges
+- **Corporate CSR**: Companies can sponsor meals per steps
+- **Fitness Communities**: Reward good health with good deeds
+
+### 💸 Monetization (Optional)
+- Partner with meal sponsors (like Swiggy/NGOs)
+- Premium badges / merch
+- NGO analytics tools (paid)
+
+---
+
+## 🚀 Future Improvements
+
+- ✅ Real backend with user auth, DB, NGO verification
+- 🔁 Google Fit integration for real-time step syncing
+- 🎯 Personalized donation impact tracking
+- 🧭 Geo-matching: find NGOs near the volunteer’s area
+- 🏆 Leaderboards for most active volunteers
+- 📱 Mobile App
+
+---
+
+## 🫶 Built With Love By
+
+**Praatishthaa Goyal**  
+CSE'27 student, Frontend Engineer, Dreamer of big impact tech ✨  
+[LinkedIn](https://linkedin.com/in/praatishthaa-goyal) • [GitHub](https://github.com/praatishthaa)
+
+**Shaurya Pathak**  
+CSE'26 student, Blockchain enthusiast, Dreamer of big impact tech 💻  
+[LinkedIn](https://www.linkedin.com/in/shaurya-pathak-bb9400206) • [GitHub](https://github.com/praatishthaa](https://github.com/Shauryadapp)
+
+---
+
+## 💬 Final Words
+
+If even *one* person is fed because you went on a walk…  
+That’s a better world than yesterday.
+
+Let’s nourish. Let’s move.  
+**Let’s Nourivo.**
