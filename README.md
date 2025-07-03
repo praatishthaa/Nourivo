@@ -155,7 +155,7 @@ CSE'27 student, Frontend Engineer, Dreamer of big impact tech ✨
 
 **Shaurya Pathak**  
 CSE'26 student, Blockchain enthusiast, Dreamer of big impact tech 💻  
-[LinkedIn](https://www.linkedin.com/in/shaurya-pathak-bb9400206) • [GitHub](https://github.com/praatishthaa](https://github.com/Shauryadapp)
+[LinkedIn](https://www.linkedin.com/in/shaurya-pathak-bb9400206) • [GitHub](https://github.com/Shauryadapp)
 
 ---
 
