@@ -9,7 +9,7 @@ const VolunteerProfile = () => {
 
   return (
     <div className="p-6 text-bistre">
-      <img src="/assets/logo.png" alt="Nourivo Logo" className="h-8 w-auto mb-4" />
+      <img src={logo} alt="Nourivo Logo" className="h-10 w-15 mb-4" />
       <h1 className="text-3xl font-bold mb-2">Your Profile 🧍‍♀️</h1>
       <p className="text-sm text-slategray mb-6">Here’s everything we know about your amazing self 😌</p>
 
