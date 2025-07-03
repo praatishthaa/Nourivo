@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Running the Application
+
+To run this application, you will need:
+
+1.  **Node.js and npm:** This project is a React application, so you need Node.js and npm (Node Package Manager) installed on your machine. You can download them from [https://nodejs.org/](https://nodejs.org/).
+2.  **Install dependencies:** After cloning the project, navigate to the project directory in your terminal and run `npm install` to install all the necessary dependencies.
+3.  **Environment variables:** The application may require some environment variables to be set. These variables are typically stored in a `.env` file in the root of the project. You may need to create this file and add the necessary variables.
+4.  **Run the application:** Once the dependencies are installed and the environment variables are set, you can run the application using the command `npm start`. This will start the development server and open the application in your browser.
+
+## API Keys
+
+The following API keys are needed for full functionality:
+
+1.  **Fitbit API key and client ID:** To integrate with the Fitbit API and retrieve step data, you need to obtain an API key and client ID from the Fitbit Developer Portal ([https://dev.fitbit.com/](https://dev.fitbit.com/)). You will need to create a Fitbit application and configure it with the necessary permissions.
+2.  **NGO notification system API key (if applicable):** If you want to integrate with a real NGO notification system, you will need to obtain an API key from the provider of that system.
+3.  **Backend API endpoint:** The application currently uses mock implementations for NGO sign-up, sign-in, and fetching nearby volunteers. To connect to a real backend, you need to configure the API endpoint in the `ngoService.jsx` file.
