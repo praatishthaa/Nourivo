@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
-import logo from '../assets/logo/logo.png'; // make sure you have this!
+import logo from '../assets/logo/logo.png'; // make sure this path is correct!
 
 const Navbar = () => {
   return (
     <header className="bg-bistre text-white px-6 py-4 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        
+
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Nourivo Logo" className="w-10 h-10 rounded-full" />
@@ -19,6 +19,11 @@ const Navbar = () => {
           <Link to="/" className="hover:text-yellowbus transition">Home</Link>
           <Link to="/volunteer/signup" className="hover:text-yellowbus transition">Volunteer</Link>
           <Link to="/ngo/signup" className="hover:text-yellowbus transition">NGO</Link>
+
+          {/* 💻 Debug/Test Links */}
+          <Link to="/volunteer/dashboard" className="hover:text-yellowbus transition">V Dashboard</Link>
+          <Link to="/ngo/dashboard" className="hover:text-yellowbus transition">NGO Dashboard</Link>
+          <Link to="/ngo/volunteers" className="hover:text-yellowbus transition">Volunteers</Link>
         </nav>
 
         {/* Call to Action */}

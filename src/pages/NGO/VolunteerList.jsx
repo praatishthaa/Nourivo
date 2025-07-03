@@ -32,7 +32,7 @@ const mockVolunteers = [
 const VolunteerList = () => {
   return (
     <div className="p-6">
-      <img src="/assets/logo.png" alt="Nourivo Logo" className="h-8 w-auto mb-4" />
+      <img src={logo} alt="Nourivo Logo" className="h-10 w-10 mb-4" />
       <h1 className="text-3xl font-bold text-bistre mb-4">Nearby Volunteers</h1>
       <p className="text-sm text-slategray mb-6">These users are contributing to your cause 🧡</p>
 

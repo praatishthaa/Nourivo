@@ -1,41 +1,27 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSteps } from '../context/StepContext';
 
-const StepCounter = ({ stepsToday }) => {
-  const progress = Math.min((stepsToday / 10000) * 100, 100); // cap at 100%
-  const meals = Math.floor(stepsToday / 10000);
+const StepCounter = () => {
+  const { stepsToday, totalSteps } = useSteps();
+
+  const formattedStepsToday = (stepsToday ?? 0).toLocaleString();
+  const formattedTotalSteps = (totalSteps ?? 0).toLocaleString();
 
   return (
-    <div className="bg-white rounded-xl shadow-card p-6 w-full max-w-md mx-auto text-center">
-      <h2 className="text-2xl font-bold text-bistre mb-2">Today's Progress</h2>
-      <p className="text-slategray text-sm mb-4">Keep walking, you're making a difference 💛</p>
-
-      {/* Progress Bar */}
-      <div className="w-full bg-gray-200 h-4 rounded-full mb-4">
-        <div
-          className="bg-tiffany h-4 rounded-full transition-all duration-300"
-          style={{ width: `${progress}%` }}
-        ></div>
-      </div>
-
-      <div className="flex justify-between text-sm text-bistre mb-4">
-        <span>0</span>
-        <span>10,000 steps</span>
-      </div>
-
-      {/* Step & Meal Stats */}
-      <div className="text-bistre text-lg font-semibold">
-        Steps: <span className="text-teal">{stepsToday.toLocaleString()}</span>
-      </div>
-      <div className="text-bistre mt-1 text-md">
-        Meals Donated: <span className="text-yellowbus font-bold">{meals}</span>
+    <div className="bg-white p-6 rounded-xl shadow-md mb-6">
+      <h2 className="text-lg font-semibold text-bistre mb-2">✨ Step Progress</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-bistre">
+        <div className="bg-yellowbus/20 p-4 rounded-lg">
+          <p className="text-sm text-slategray">Steps Today</p>
+          <p className="text-2xl font-bold">{formattedStepsToday} 👣</p>
+        </div>
+        <div className="bg-teal/20 p-4 rounded-lg">
+          <p className="text-sm text-slategray">Total Steps</p>
+          <p className="text-2xl font-bold">{formattedTotalSteps} 🪜</p>
+        </div>
       </div>
     </div>
   );
-};
-
-StepCounter.propTypes = {
-  stepsToday: PropTypes.number.isRequired,
 };
 
 export default StepCounter;

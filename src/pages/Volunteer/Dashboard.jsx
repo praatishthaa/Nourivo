@@ -9,13 +9,28 @@ const VolunteerDashboard = () => {
   const { user } = useAuth();
   const { stepsToday, mealsDonated, totalSteps } = useSteps();
 
+  // Check if data is still loading or missing
+  if (
+    stepsToday === undefined ||
+    totalSteps === undefined ||
+    mealsDonated === undefined
+  ) {
+    return (
+      <div className="p-6 text-bistre">
+        <img src={logo} alt="Nourivo Logo" className="h-12 w-12 mb-4" />
+        <h1 className="text-3xl font-bold mb-2">Welcome back, {user?.name || 'Volunteer'} 👋</h1>
+        <p className="text-sm text-slategray mb-6">Loading your progress... ⏳</p>
+      </div>
+    );
+  }
+
   // Sample badges for flexing
   const earnedBadges = [10, 30, 50].filter((meal) => mealsDonated >= meal);
 
   return (
     <div className="p-6 text-bistre">
-      <img src="/assets/logo.png" alt="Nourivo Logo" className="h-8 w-auto mb-4" />
-      <h1 className="text-3xl font-bold mb-2">Welcome back, {user ? user.name : 'Volunteer'} 👋</h1>
+      <img src={logo} alt="Nourivo Logo" className="h-12 w-12 mb-4" />
+      <h1 className="text-3xl font-bold mb-2">Welcome back, {user?.name || 'Volunteer'} 👋</h1>
       <p className="text-sm text-slategray mb-6">Keep stepping — you're making a difference 💛</p>
 
       {/* Step Summary */}
@@ -25,17 +40,21 @@ const VolunteerDashboard = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
         <div className="bg-white p-4 rounded-xl shadow border-l-4 border-yellowbus">
           <p className="text-sm text-slategray">Steps Today</p>
-          <h2 className="text-2xl font-bold">{stepsToday.toLocaleString()} 👣</h2>
+          <h2 className="text-2xl font-bold">
+            {(stepsToday ?? 0).toLocaleString()} 👣
+          </h2>
         </div>
 
         <div className="bg-white p-4 rounded-xl shadow border-l-4 border-teal">
           <p className="text-sm text-slategray">Total Steps</p>
-          <h2 className="text-2xl font-bold">{totalSteps.toLocaleString()} 🪜</h2>
+          <h2 className="text-2xl font-bold">
+            {(totalSteps ?? 0).toLocaleString()} 🪜
+          </h2>
         </div>
 
         <div className="bg-white p-4 rounded-xl shadow border-l-4 border-slateGray">
           <p className="text-sm text-slategray">Meals Donated</p>
-          <h2 className="text-2xl font-bold">{mealsDonated} 🍱</h2>
+          <h2 className="text-2xl font-bold">{mealsDonated ?? 0} 🍱</h2>
         </div>
       </div>
 
@@ -49,7 +68,9 @@ const VolunteerDashboard = () => {
             ))}
           </div>
         ) : (
-          <p className="text-slategray text-sm">No badges yet 😢 Walk 10k steps to earn your first!</p>
+          <p className="text-slategray text-sm">
+            No badges yet 😢 Walk 10k steps to earn your first!
+          </p>
         )}
       </div>
     </div>

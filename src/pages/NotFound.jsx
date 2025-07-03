@@ -7,7 +7,7 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-white text-bistre flex flex-col">
-      <img src="/assets/logo.png" alt="Nourivo Logo" className="h-8 w-auto mb-4" />
+      <img src={logo} alt="Nourivo Logo" className="h-10 w-10" />
       {/* Navbar */}
       <nav className="w-full px-6 py-4 shadow-md bg-tiffany text-white flex justify-between items-center">
         <h1
