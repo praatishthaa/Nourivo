@@ -29,14 +29,6 @@ const Landing = () => {
         </Button>
       </div>
 
-      {/* Optional hero image */}
-      <div className="mt-10 w-full max-w-md">
-        <img
-          src="/assets/hero-walk.png" // put your image in public/assets/
-          alt="Walking for good"
-          className="w-full object-cover rounded-xl shadow-lg"
-        />
-      </div>
     </div>
   );
 };
